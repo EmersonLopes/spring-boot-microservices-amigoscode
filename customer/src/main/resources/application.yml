@@ -5,3 +5,17 @@ server:
 spring:
   application:
     name: customer
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=customer
+    username: postgres
+    password: postgres
